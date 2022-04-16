@@ -1,0 +1,23 @@
+{
+    "files.exclude": {
+        "**/*.js": { "when": "$(basename).ts" },
+        "**/**.js": { "when": "$(basename).tsx" },
+        "**/*.js.map": true
+    },
+    "typescript.disableAutomaticTypeAcquisition": true,
+    
+    "mochaExplorer.files": "app/test/**/*.test.{mj,t}s",
+    "mochaExplorer.require": [
+        "ts-node/register", // doesn't seem necessary when doing the 'commonjs' way
+        "esm" // always seems necessary
+    ],
+
+    /**
+     * settings below will send the Explorer into an infinite loop of finding tests
+     */
+    // "mochaExplorer.nodeArgv": [
+    //     "--loader=ts-node/esm",
+    //     //"--no-warnings=ExperimentalWarning",
+    //     "--experimental-specifier-resolution=node"
+    // ],
+}

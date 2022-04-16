@@ -1,0 +1,10 @@
+node_modules
+logs
+types
+yarn.lock
+
+# OSX
+.DS_Store
+
+app/test/**/*.js
+app/test/**/*.js.map
